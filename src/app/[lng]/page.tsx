@@ -4,8 +4,10 @@ import img from  "../../../public/fca5f2db-8779-4a2d-a783-7e76c9c32df9.jpeg"
 import AppBgImg from '../components/img'
 import Container from '../components/container'
 import Image from 'next/image'
-import SecondSection from '@/components/second-section'
+import {SecondSection} from '../components/sections/home/second-section'
 import { FirstSection } from '../components/sections/home/first-section'
+import { Separator } from '@/components/ui/separator'
+import bg from "../../../public/traffic-7200606__340.jpg"
 interface RootLayoutProps {
   params: {
     lng: string
@@ -31,8 +33,27 @@ const {t} = await useTranslation(lng ,"translation")
    </div>
   }
   </div> */}
+  
   <FirstSection lng={lng} ></FirstSection>
-  <SecondSection></SecondSection>
+
+
+  <Separator/>
+
+
+  <SecondSection lng={lng}></SecondSection>
+
+ 
+  <div className='w-full h-[500px] relative' style={{backgroundImage:`${bg}`}}>
+    <div>
+    <Image src={bg} alt='' fill/>
+    </div>
+    <div className='absolute top-20 left-5'>
+      <h3> some text here </h3>
+      <h3> some text here </h3>
+      <h3> some text here </h3>
+    </div>
+
+  </div>
 </>
   )
 }

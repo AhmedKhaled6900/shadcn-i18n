@@ -5,12 +5,12 @@ interface props {
     lng: string
     t: any
 }
-import img from "../../../../../public/fca5f2db-8779-4a2d-a783-7e76c9c32df9.jpeg"
+import img from "../../../../../public/i-need-background-img-for-my-website-and-i-want-t.jpg"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { t } from 'i18next'
 import { useEffect } from "react";
-export const FirstSectionComponent = ({ t, lng }: props) => {
+export const SecondSectionComponent = ({ t, lng }: props) => {
     useEffect(() => {
         AOS.init({
             // AOS options (optional)
@@ -19,27 +19,27 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className='  mt-10 justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
+            <div className=' justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
-                    <div className=' hidden lg:block h-full pt-0 lg:pt-10 bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
+                    <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h1 data-aos="fade-up" data-aos-duration="2000"
                             className='  lg:m-10 font-semibold text-xl'>
                             {t('heading')}
                         </h1>
                         <h1
                             data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className='leading-80 m-10 lg:m-10 font-semibold text-xl'>
+                            className=' m-10 lg:m-10 font-semibold text-xl'>
                             {t('heading1')}
 
                         </h1>
                         <h1
                             data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className='leading-80 m-10 lg:m-10 font-semibold text-xl'>
+                            className=' m-10 lg:m-10 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h1>
                         {/* <h3>{t("heading")}</h3> */}
-                    </div> : <div className=' h-full  leading-80 pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
+                    </div> : <div className=' h-full  pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
                         <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }} className='m-10 lg:m-10  text-xl'> {t('heading')}</h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
                             style={{ lineHeight: "1.3" }} className='m-10 lg:m-10  text-xl'> {t('heading1')}
