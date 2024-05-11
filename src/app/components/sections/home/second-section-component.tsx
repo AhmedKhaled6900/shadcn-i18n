@@ -19,7 +19,7 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className=' justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
+            <div className='mt-10 justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
                     <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h1 data-aos="fade-up" data-aos-duration="2000"
@@ -39,7 +39,7 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
 
                         </h1>
                         {/* <h3>{t("heading")}</h3> */}
-                    </div> : <div className=' h-full  pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
+                    </div> : <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
                         <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }} className='m-10 lg:m-10  text-xl'> {t('heading')}</h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
                             style={{ lineHeight: "1.3" }} className='m-10 lg:m-10  text-xl'> {t('heading1')}
@@ -51,7 +51,7 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
                         </h3>
                     </div>}
                 {
-                    lng === "en" ? <div className=' relative   '>
+                    lng === "en" ? <div className=' relative hidden lg:block   '>
                         <Image className='lg:rounded-tl-[150px] lg:rounded-bl-[150px] '  alt='' src={img} />
                     </div> : <div className=' relative '>
                         <Image className='lg:rounded-tr-[150px] lg:rounded-br-[150px] '  alt='' src={img} />

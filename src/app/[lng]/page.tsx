@@ -14,7 +14,8 @@ interface RootLayoutProps {
   }
 }
 export default async function Page({ params: { lng } } : RootLayoutProps) {
-const {t} = await useTranslation(lng ,"translation")
+// const {t} = await useTranslation(lng ,"translation")
+const {t} = await useTranslation(lng ,"third-page")
   return (
   
   <>
@@ -43,15 +44,33 @@ const {t} = await useTranslation(lng ,"translation")
   <SecondSection lng={lng}></SecondSection>
 
  
-  <div className='w-full h-[500px] relative' style={{backgroundImage:`${bg}`}}>
+  <div className='w-full h-[500px] relative ' style={{backgroundImage:`${bg}`}}>
     <div>
     <Image src={bg} alt='' fill/>
     </div>
-    <div className='absolute top-20 left-5'>
-      <h3> some text here </h3>
-      <h3> some text here </h3>
-      <h3> some text here </h3>
+    {
+      lng==="en"?    <div data-aos="fade-right" className=' bg-gradient-to-b p-10 from-b to-black absolute top-20 left-20 overflow-hidden'>
+      <h3 data-aos="fade-right"> {t("first")} </h3>
+      <h3 data-aos="fade-right"> {t("second")} </h3>
+      <h3 data-aos="fade-right">{t("third")} </h3>
+    </div>:    <div className='absolute top-20 right-20 overflow-hidden'>
+      <h3 data-aos="fade-left"> {t("first")} </h3>
+      <h3 data-aos="fade-left"> {t("second")} </h3>
+      <h3 data-aos="fade-left">{t("third")} </h3>
     </div>
+    }
+    {
+      lng==="en"?    <div data-aos="fade-right" className=' bg-gradient-to-b p-10 from-b to-black absolute top-60 left-20 overflow-hidden'>
+      <h3 data-aos="fade-right"> {t("first")} </h3>
+      <h3 data-aos="fade-right"> {t("second")} </h3>
+      <h3 data-aos="fade-right">{t("third")} </h3>
+    </div>:    <div className='absolute top-20 right-20 overflow-hidden'>
+      <h3 data-aos="fade-left"> {t("first")} </h3>
+      <h3 data-aos="fade-left"> {t("second")} </h3>
+      <h3 data-aos="fade-left">{t("third")} </h3>
+    </div>
+    }
+
 
   </div>
 </>
