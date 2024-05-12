@@ -5,7 +5,7 @@ import {NextUIProvider} from "@nextui-org/system";
 // import {Providers} from '../provider'
 import NavbarComponent from '../components/nav/nav'
 const languages = ['en', 'ar']
-import { Footer } from '../components/nav/client'
+import {  Header } from '../components/nav/client'
 import  '../globals.css'
 import { NavClient } from '../components/nav-client'
 import { useTranslation } from '../i18n'
@@ -45,7 +45,7 @@ export default  function RootLayout({
     >
       <head />
       <body className={font.className} > 
-      <Footer lng={lng} /> 
+      <Header lng={lng} /> 
       <div >
       {children}
 

@@ -54,7 +54,7 @@ const noClick=()=>{
   ];
   return (
     <>
-    <nav className="px-10 py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center lg:space-x-6"
+    <nav className="  px-10 py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
 >
 <div>
 <Image src={logo} alt="logo" width={35} height={35}/>

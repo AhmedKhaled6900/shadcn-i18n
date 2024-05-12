@@ -6,7 +6,7 @@ import  {useTranslation}  from '../../i18n/client'
 interface props {
   lng: string
 }
-export const Footer = ({ lng } : props) => {
+export const Header = ({ lng } : props) => {
   const  { t}  = useTranslation(lng, 'navbar', 'footer')
   return <NavbarComponent t={t} lng={lng} />
 }
