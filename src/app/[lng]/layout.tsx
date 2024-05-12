@@ -14,6 +14,8 @@ import { withTranslation } from 'react-i18next'
 import Container from '../components/container';
 import {Poppins} from "next/font/google"
 import { DividerHorizontalIcon } from '@radix-ui/react-icons';
+import { FooterComponent } from '../components/footer/footer';
+import { Footer } from '../components/footer/footerclient';
 const font = Poppins({
   subsets: ['latin'],
   weight:["200"]
@@ -50,15 +52,7 @@ export default  function RootLayout({
       {children}
 
       </div>
-
-
-     
-            
-
-
-
-        
-      </body>
+<Footer  lng={lng}></Footer>      </body>
     </html>
   )
 }

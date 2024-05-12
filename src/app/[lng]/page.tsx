@@ -1,3 +1,5 @@
+
+"use client"
 import Link from 'next/link'
 import { useTranslation } from '../i18n'
 import img from  "../../../public/fca5f2db-8779-4a2d-a783-7e76c9c32df9.jpeg"
@@ -8,14 +10,15 @@ import {SecondSection} from '../components/sections/home/second-section'
 import { FirstSection } from '../components/sections/home/first-section'
 import { Separator } from '@/components/ui/separator'
 import bg from "../../../public/traffic-7200606__340.jpg"
+import  {SendEmailForm}  from '@/components/form'
 interface RootLayoutProps {
   params: {
     lng: string
   }
 }
-export default async function Page({ params: { lng } } : RootLayoutProps) {
+export default  function Page({ params: { lng } } : RootLayoutProps) {
 // const {t} = await useTranslation(lng ,"translation")
-const {t} = await useTranslation(lng ,"third-page")
+// const {t} = await useTranslation(lng ,"third-page")
   return (
   
   <>
@@ -26,7 +29,7 @@ const {t} = await useTranslation(lng ,"third-page")
     <div>
     <Image src={bg} alt='' fill/>
     </div>
-    {
+    {/* {
       lng==="en"?<div data-aos="fade-right" className=' space-x-4  flex justify-center items-center '>
         <div className=' bg-gradient-to-b p-5 from-b to-black '>
         <h3 data-aos="fade-right"> {t("first")} </h3>
@@ -52,7 +55,7 @@ const {t} = await useTranslation(lng ,"third-page")
       </div>
    
     </div>
-    }
+    } */}
     {/* {
       lng==="en"?    <div data-aos="fade-right" className=' bg-gradient-to-b p-10 from-b to-black absolute top-60 left-20 overflow-hidden'>
       <h3 data-aos="fade-right"> {t("first")} </h3>
@@ -65,6 +68,8 @@ const {t} = await useTranslation(lng ,"third-page")
     </div>
     } */}
   </div>
+  <SendEmailForm></SendEmailForm>
+
 </>
   )
 }
