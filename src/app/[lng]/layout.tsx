@@ -18,7 +18,7 @@ import { FooterComponent } from '../components/footer/footer';
 import { Footer } from '../components/footer/footerclient';
 const font = Poppins({
   subsets: ['latin'],
-  weight:["200"]
+  weight:["400"]
 }
 )
 // export async function generateStaticParams() {

@@ -2,7 +2,7 @@
 "use client"
 import * as z from 'zod'
 
-
+import img from "../../public/wired-outline-177-envelope-send.gif"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
@@ -19,6 +19,7 @@ import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { sendMail } from '../../actions/sendmail';
 import { useTransition } from 'react'
+import Image from 'next/image'
 
  export const Schema =
  z.object({ 
@@ -46,6 +47,18 @@ export const SendEmailForm=()=>{
       sendMail( values ) })}
 
     return(
+      <>
+      <div className='flex flex-col items-center justify-center text-center p-10 p-5   '>
+<h3 className='text-xl '>
+Have a question? <br />
+We would love to hear from you .
+</h3>
+<div>
+<Image src={img} alt="" width={100} height={100}/>
+
+</div>
+
+</div>
         <Form {...form}>
 <form className="space-y-4 p-10 bg-gradient-to-b p-5 from-b to-black" onSubmit={form.handleSubmit(onSubmit)}>
 <FormField control={form.control}
@@ -96,14 +109,17 @@ export const SendEmailForm=()=>{
                         <FormMessage />
                       </FormItem>
                     )} />  
-                    
-                    <Button type='submit' className='w-full bg-gradient-to-b p-5 from-b to-black font-semibold' >
-send
-
+                    <div className='  flex justify-center items-center '>
+                    <Button type='submit' className=' mt-10 w-full lg:w-1/3  rounded bg-gradient-to-b p-5 from-b to-black font-semibold' >
+                        Send
                     </Button>
+                    </div>
+
 
 </form>
         </Form>
+      </>
+
     )
 }
 
