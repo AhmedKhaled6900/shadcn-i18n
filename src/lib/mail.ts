@@ -1,8 +1,8 @@
 import { Schema } from "@/components/form"
 import  {Resend} from "resend"
 import * as z from 'zod'
-const resend = new Resend("re_53xq7M2c_HiozALpCsR7w5Fe1wqnE91fj")
-resend.apiKeys.create({ name: 'Production' });
+const resend = new Resend(process.env.RESEND_API_KEY)
+// resend.apiKeys.create({ name: 'Production' });
 
 // const Schema =
 // z.object({ 
@@ -15,19 +15,17 @@ resend.apiKeys.create({ name: 'Production' });
 
 // });
 export const SendEmails = async (
-    // values: z.infer<typeof Schema>
 email : string,
 name : string,
 subject : string
 )=>{
-  // console.log(token)
-// const {email, name, subject} = values
+
 await resend.emails.send({
-  from: email,
+  from: "onboarding@resend.dev",
   to: "ahmedkha6900@gmail.com",
-  subject: "Two Factor Authentication",
+  subject: "Email",
   html: `
-  <p> Hi ${name},${subject} </p>
+  <p> Hi ${name},${subject} ,${email} </p>
   `
 })
 }
