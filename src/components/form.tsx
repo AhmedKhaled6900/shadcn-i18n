@@ -90,7 +90,7 @@ export const SendEmailForm=()=>{
                             {...field}
                             // disabled={ispending}
                             placeholder="enter your message"
-                            type="text"
+                            type="textarea"
                           />
                         </FormControl>
                         <FormMessage />

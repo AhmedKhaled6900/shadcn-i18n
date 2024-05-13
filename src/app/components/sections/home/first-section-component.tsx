@@ -23,31 +23,33 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
                 {lng === "en" ?
                     <div className='  pt-0 lg:pt-20  h-full bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h3 data-aos="fade-up" data-aos-duration="2000"
-                            className=' p-5  font-semibold text-xl'>
+                            className=' m-5 lg:m-10  font-semibold text-xl'>
                             {t('heading')}
                         </h3>
                         <h3
                             data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className=' p-5 font-semibold text-xl'>
+                            className='m-5 lg:m-10 font-semibold text-xl'>
                             {t('heading1')}
 
                         </h3>
                         <h3
                             data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className=' p-5 font-semibold text-xl'>
+                            className=' m-5 lg:m-10 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h3>
                         {/* <h3>{t("heading")}</h3> */}
                     </div> :
                      <div className='  pt-0 lg:pt-20  h-full  bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
-                        <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }} className='p-5 text-xl'> {t('heading')}</h3>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }}
+                         className='m-5 lg:m-10 text-xl'> {t('heading')}</h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
                             style={{ lineHeight: "1.3" }} className='p-5 text-xl'> {t('heading1')}
 
                         </h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
-                            style={{ lineHeight: "1.3" }} className='p-5 text-xl'> {t('heading2')}
+                            style={{ lineHeight: "1.3" }}
+                             className='m-5 lg:m-10 text-xl'> {t('heading2')}
 
                         </h3>
                     </div>}
