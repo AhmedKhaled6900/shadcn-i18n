@@ -54,7 +54,7 @@ const noClick=()=>{
   ];
   return (
     <>
-    <nav className="  px-10 py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
+    <nav className="   py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
 >
 <div>
 <Image src={logo} alt="logo" width={35} height={35}/>
@@ -66,7 +66,7 @@ const noClick=()=>{
     key={route.href}
     href={route.href}
     className={cn(
-      ' font-medium text-xl m-3 transition-colors text-white hover:border-b-2 hover:border-white',
+      ' font-medium text-lg m-2 transition-colors text-white hover:border-b-2 hover:border-white',
       // route.link ? 'text-black dark:text-white' : 'text-muted-foreground'
     )}
   >
