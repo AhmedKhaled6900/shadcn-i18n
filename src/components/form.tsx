@@ -68,7 +68,7 @@ export const SendEmailForm=({ t, lng}:props )=>{
 
     return(
       <>
-      <div className='flex flex-col items-center justify-center text-center p-10 p-5   '>
+      <div className='flex flex-col items-center justify-center text-center p-5   '>
 <h3 className='text-xl '>
 {t("question")} <br />
 {t("answer")}</h3>
