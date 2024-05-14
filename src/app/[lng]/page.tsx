@@ -11,6 +11,7 @@ import { FirstSection } from '../components/sections/home/first-section'
 import { Separator } from '@/components/ui/separator'
 import bg from "../../../public/traffic-7200606__340.jpg"
 import  {SendEmailForm}  from '@/components/form'
+import { FormComponent } from '@/components/form-client'
 interface RootLayoutProps {
   params: {
     lng: string
@@ -58,7 +59,8 @@ const {t} = await useTranslation(lng ,"third-page")
     } 
   </div>
   <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'>
-  <SendEmailForm></SendEmailForm>
+    <FormComponent  lng={lng}></FormComponent>
+  {/* <SendEmailForm></SendEmailForm> */}
 
 {/* <div>
 <h3 className='text-xl '>

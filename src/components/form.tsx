@@ -18,20 +18,28 @@ import {
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { sendMail } from '../../actions/sendmail';
-import { useTransition } from 'react'
+import { useState, useTransition } from 'react'
 import Image from 'next/image'
-
+import { setInterval } from 'timers'
+import { FormSuccess } from './form-success'
+import { FormError } from './form-error'
+interface props {
+  lng: string
+  t: any
+}
  export const Schema =
  z.object({ 
     email: z.string().email({
-    message: "invalid email"
+    message: "Email is required"
 }),
  name: z.string().min(3 ,{message:"Name is required"}),
  subject: z.string().min(10 ,{message:"Subject is required"}),
 });
 
-export const SendEmailForm=()=>{
+export const SendEmailForm=({ t, lng}:props )=>{
   const [ispending, starttransition] = useTransition()
+  const [success, setSuccess] = useState<string | undefined>("")
+  const [error, setError] = useState<string | undefined>("")
 
     const form =useForm<z.infer<typeof Schema>>({
         resolver: zodResolver(Schema),
@@ -42,17 +50,28 @@ export const SendEmailForm=()=>{
         }
     })
     const onSubmit = async (values: z.infer<typeof Schema>) => {
+      setSuccess("")
+      setError("")
       console.log(values)
       starttransition(() => {
-      sendMail( values ) })}
+      sendMail( values )
+    
+      .then((data)=>{
+        setSuccess(data.success)
+        setError(data.error)
+      })
+    })
+     
+     setTimeout(()=>{form.reset()}, 3000)
+   
+    }
 
     return(
       <>
       <div className='flex flex-col items-center justify-center text-center p-10 p-5   '>
 <h3 className='text-xl '>
-Have a question? <br />
-We would love to hear from you .
-</h3>
+{t("question")} <br />
+{t("answer")}</h3>
 <div>
 <Image src={img} alt="" width={100} height={100}/>
 
@@ -65,53 +84,56 @@ We would love to hear from you .
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>{t("email")}</FormLabel>
                         <FormControl>
-                          <Input className='rounded' 
+                          <Input  className='rounded' 
                             {...field}
-                            // disabled={ispending}
-                            placeholder="Email@example.com"
+                            disabled={ispending}
+                            placeholder="email@example.com"
                             type="email"
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className='text-red-500' />
                       </FormItem>
                     )} />  
 <FormField control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>{t("name")}</FormLabel>
                         <FormControl>
                           <Input className='rounded'
                             {...field}
-                            // disabled={ispending}
+                            disabled={ispending}
                             placeholder="Email@example.com"
                             type="text"
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage  className='text-red-500'/>
                       </FormItem>
                     )} />  
 <FormField control={form.control}
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>subject</FormLabel>
+                        <FormLabel>{t("message")}</FormLabel>
                         <FormControl>
                           <Input className='rounded'
                             {...field}
-                            // disabled={ispending}
-                            placeholder="enter your message"
+                            disabled={ispending}
+                            placeholder={t("yourmessage")}
                             type="textarea"
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className='text-red-500' />
                       </FormItem>
                     )} />  
+                   <FormSuccess  message={success}></FormSuccess>
+<FormError message={error} ></FormError>
                     <div className='  flex justify-center items-center '>
-                    <Button type='submit' className=' mt-10 w-full lg:w-1/3  rounded bg-gradient-to-b p-5 from-b to-black font-semibold' >
-                        Send
+                    {/* <FormError message={"error"}></FormError> */}
+                    <Button disabled={ispending} type='submit' className=' mt-10 w-full lg:w-1/3  rounded bg-gradient-to-b p-5 from-b to-black font-semibold' >
+                       {t("send")}
                     </Button>
                     </div>
 
