@@ -41,15 +41,15 @@ export const FooterComponent =({ t, lng }: any)=>{
         <div className="flex flex-col items-center justify-center text-center p-5">
     
             <h3 className="text-xl">
-                another text <br />
-                another text
+                {t("contact")} <br />
+                {t("avaliable")}
             </h3>
 
 
             <Image alt = "" src={img} width={50} height={50}/>
         </div>
         <div className="flex flex-col gap-3 h-[400px] bg-gradient-to-b  from-b to-black">
-        <div className="p-5  bg-gradient-to-b flex gap-10 from-b to-black">
+        <div className="p-5  bg-gradient-to-b flex gap-5 lg:gap-10  justify-center items-center from-b to-black">
           {
             rrr.map((item,index)=><Link href={item.url} key={index}>
             <div className=" bg-gradient-to-b  from-b to-black h-[40px] w-[40px] flex justify-center items-center rounded-full" >
@@ -67,7 +67,7 @@ export const FooterComponent =({ t, lng }: any)=>{
         
         </div>
         <div className="p-5  bg-gradient-to-b  from-b to-black">
-          <h3> Lorem, ipsum. ispum.lorem</h3>
+          
         </div>
         <div className="p-5  bg-gradient-to-b  from-b to-black">
           <h3> Lorem, ipsum. ispum.lorem</h3>
