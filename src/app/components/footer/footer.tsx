@@ -4,6 +4,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
+import { FiTwitter } from "react-icons/fi";
+
 import Link from "next/link";
 
 
@@ -25,7 +27,14 @@ export const FooterComponent =({ t, lng }: any)=>{
     {
       icon: <IoLogoLinkedin className="h-[30px] w-[30px]"/>,
       url: "https://www.linkedin.com/",
-    }
+
+    },
+    {
+      icon: <FiTwitter className="h-[30px] w-[30px]"/>,
+      url: "https://www.twitter.com/",
+
+    },
+  
 
 ]
     return(<>
