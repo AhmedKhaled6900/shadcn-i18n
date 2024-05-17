@@ -6,6 +6,6 @@ interface props {
   lng: string
 }
 export const Footer = ({ lng } : props) => {
-  const  { t}  = useTranslation(lng,`navbar`)
+  const  { t}  = useTranslation(lng,`footer`)
   return <FooterComponent t ={t} lng={lng} />
 }

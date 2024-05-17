@@ -17,7 +17,7 @@ export function getOptions (lng = fallbackLng, ns = defaultNS) {
 }
 // settings.ts
 
-export type SupportedLangsType = 'en' | 'fr' | 'es' | 'de'; // Or any other languages you support
+export type SupportedLangsType = 'en' | 'ar'  // Or any other languages you support
 
 export interface GetOptionsType {
   lng: SupportedLangsType;

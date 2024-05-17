@@ -26,7 +26,7 @@ const {t} = await useTranslation(lng ,"third-page")
   <FirstSection lng={lng} ></FirstSection>
   <Separator/>
   <SecondSection lng={lng}></SecondSection>
-  <div className='mt-10 w-full h-[500px] relative flex justify-center items-center  ' style={{backgroundImage:`${bg}`}}>
+  <div className=' w-full h-[500px] relative flex justify-center items-center  ' style={{backgroundImage:`${bg}`}}>
     <div>
     <Image src={bg} alt='' fill/>
     </div>
@@ -58,9 +58,9 @@ const {t} = await useTranslation(lng ,"third-page")
     </div>
     } 
   </div>
-  <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'>
-    <FormComponent  lng={lng}></FormComponent>
-  {/* <SendEmailForm></SendEmailForm> */}
+  {/* <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'> */}
+{/* <SendEmailForm t={t} lng={lng}></SendEmailForm> */}
+    {/* <FormComponent  lng={lng}></FormComponent> */}
 
 {/* <div>
 <h3 className='text-xl '>
@@ -70,7 +70,7 @@ Shoot me an email:
 <Image src={img} alt="" width={300} height={300}/>
 
 </div>  */}
-  </div>
+  {/* </div> */}
 
 </>
   )

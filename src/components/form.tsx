@@ -71,13 +71,13 @@ export const SendEmailForm=({ t, lng}:props )=>{
 {t("question")} <br />
 {t("answer")}</h3>
 <div>
-<Image src={img} alt="" width={100} height={100}/>
+<Image src={img} alt="" width={50} height={50}/>
 
 </div>
 
 </div>
         <Form {...form}>
-<form className="space-y-4 p-10 bg-gradient-to-b p-5 from-b to-black" onSubmit={form.handleSubmit(onSubmit)}>
+<form className="space-y-4 p-10 bg-gradient-to-b  from-b to-black mx-5 rounded-2xl h-[400px] " onSubmit={form.handleSubmit(onSubmit)}>
 <FormField control={form.control}
                     name="email"
                     render={({ field }) => (

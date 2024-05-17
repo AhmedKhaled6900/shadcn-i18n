@@ -1,5 +1,5 @@
 
-"use client"
+// "use client"
 import { dir, t } from 'i18next'
 import {NextUIProvider} from "@nextui-org/system";
 // import {Providers} from '../provider'
@@ -16,14 +16,17 @@ import {Poppins} from "next/font/google"
 import { DividerHorizontalIcon } from '@radix-ui/react-icons';
 import { FooterComponent } from '../components/footer/footer';
 import { Footer } from '../components/footer/footerclient';
+import { Testcomponent } from '../components/test';
+import { FormComponent } from '@/components/form-client';
+import { SendEmailForm } from '@/components/form';
 const font = Poppins({
   subsets: ['latin'],
   weight:["400"]
 }
 )
-// export async function generateStaticParams() {
-//   return languages.map((lng) => ({ lng }))
-// }
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 interface RootLayoutProps {
@@ -32,13 +35,14 @@ interface RootLayoutProps {
     lng: string
   }
 }
-export default  function RootLayout({
+export default async function RootLayout({
   children,
   params: {
     lng
   }
 } : RootLayoutProps) {
-  // const {t} = await useTranslation(lng , "lang")
+  const {t} = await useTranslation(lng , "form")
+  // const {tForm} =await useTranslation(lng ,"form")
   
   
   return (
@@ -52,7 +56,19 @@ export default  function RootLayout({
       {children}
 
       </div>
-<Footer  lng={lng}></Footer>      </body>
+
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'>
+    <FormComponent   lng={lng}></FormComponent>
+<div className='h-[100%]'>
+<Footer lng={lng}></Footer> 
+
+</div>
+
+      </div>
+
+
+
+     </body>
     </html>
   )
 }

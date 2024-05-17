@@ -19,7 +19,7 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className='mt-10 justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
+            <div className=' justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
                     <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h1 data-aos="fade-up" data-aos-duration="2000"
