@@ -55,7 +55,7 @@ export const SendEmailForm=({ t, lng}:props )=>{
       sendMail( values )
     
       .then((data)=>{
-        setSuccess(data.success)
+        setSuccess ( data.success)
         setError(data.error)
       })
     })
@@ -77,7 +77,7 @@ export const SendEmailForm=({ t, lng}:props )=>{
 
 </div>
         <Form {...form}>
-<form className="space-y-4 p-10 bg-gradient-to-b  from-b to-black mx-5 rounded-2xl h-[400px] " onSubmit={form.handleSubmit(onSubmit)}>
+<form className="space-y-4 p-10 bg-gradient-to-b  from-b to-black mx-5 rounded-2xl  max-h-[600px] " onSubmit={form.handleSubmit(onSubmit)}>
 <FormField control={form.control}
                     name="email"
                     render={({ field }) => (
@@ -119,7 +119,7 @@ export const SendEmailForm=({ t, lng}:props )=>{
                           <Input className='rounded'
                             {...field}
                             disabled={ispending}
-                            placeholder={t("yourmessage")}
+                            placeholder={t("your message")}
                             type="textarea"
                           />
                         </FormControl>
@@ -129,7 +129,6 @@ export const SendEmailForm=({ t, lng}:props )=>{
                    <FormSuccess  message={success}></FormSuccess>
 <FormError message={error} ></FormError>
                     <div className='  flex justify-center items-center '>
-                    {/* <FormError message={"error"}></FormError> */}
                     <Button disabled={ispending} type='submit' className=' mt-10 w-full lg:w-1/3  rounded bg-gradient-to-b p-5 from-b to-black font-semibold' >
                        {t("send")}
                     </Button>

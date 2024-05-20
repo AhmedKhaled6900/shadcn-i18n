@@ -8,7 +8,8 @@
     "namerequired":" الأسم مطلوب ",
     "emailrequired":" الايميل مطلوب ",
     "subjectrequired":" الموضوع مطلوب ",
-    "send":"ارسال"
+    "send":"ارسال",
+    "sent":"تم الارسال بنجاح"
 
 
 }

@@ -15,8 +15,8 @@ subject: z.string().min(10 ,{message:"Subject is required"}),
 export const sendMail = async (values: z.infer<typeof Schema>) => {
     const validatedFields = Schema.safeParse(values)
     if (!validatedFields.success) {
-        return {error:"Invalid fields"};    }
+        return {error:"Invalid "};    }
     const {email, name, subject} = validatedFields.data
     await SendEmails(email, name, subject)
-return {success: "Message sent"}
+return {success: "sent"}
 }

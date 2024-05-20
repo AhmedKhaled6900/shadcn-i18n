@@ -24,7 +24,7 @@ const patheName= usePathname()
 const router = useRouter()
 const s=patheName.slice(3)
 console.log(s)
-const noClick=()=>{
+const onClick=()=>{
   if(patheName.startsWith("/en"))
    router.replace(`/ar${s}`)
   if(patheName.startsWith("/ar"))
@@ -74,9 +74,12 @@ const noClick=()=>{
 </Link>
 ))}
 </div>
-<Button  onClick={noClick} color="gradient" >
+<div className="texl-2xl font-medium ">
+<Button  onClick={onClick}  >
   {patheName==="/ar" ? t("lang") : t("lang")}
 </Button>
+</div>
+
 {/* <Link href={} ></Link> */}
 </nav>
   </>

@@ -8,5 +8,6 @@
     "namerequired":"Name is required",
     "emailrequired":"Email is required",
     "subjectrequired":"Subject is required",
-    "send":"Send"
+    "send":"Send",
+    "sent":"Sent"
 }
