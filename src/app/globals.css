@@ -37,4 +37,22 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-} */
+/* } */
+
+
+
+.cover-all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Covers the entire viewport */
+}
+.cover-previous {
+  /* Adjust styles if needed, not used in this example */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

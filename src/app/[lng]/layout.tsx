@@ -52,10 +52,10 @@ export default async function RootLayout({
       <head />
       <body className={font.className} > 
       <Header lng={lng} /> 
-      <div >
+      {/* <div > */}
       {children}
 
-      </div>
+      {/* </div> */}
 
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'>
     <FormComponent   lng={lng}></FormComponent>

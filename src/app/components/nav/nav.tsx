@@ -54,7 +54,7 @@ const onClick=()=>{
   ];
   return (
     <>
-    <nav className="   py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
+    <nav className="  relative z-50 py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
 >
 <div>
 <Image src={logo} alt="logo" width={35} height={35}/>
