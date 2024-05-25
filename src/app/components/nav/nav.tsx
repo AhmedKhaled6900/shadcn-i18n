@@ -66,7 +66,7 @@ const onClick=()=>{
     key={route.href}
     href={route.href}
     className={cn(
-      ' p-5 font-medium text-lg m-2 transition-colors text-white hover:border-b-2 hover:border-white',
+      ' pb-5 lg:p-5 font-medium text-lg m-2 transition-colors text-white hover:border-b-2 hover:border-white',
       // route.link ? 'text-black dark:text-white' : 'text-muted-foreground'
     )}
   >
