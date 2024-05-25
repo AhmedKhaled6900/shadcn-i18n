@@ -1,5 +1,7 @@
 
 // "use client"
+import logo from "../../../public/feather-7977327_640.webp"
+
 import { dir, t } from 'i18next'
 import {NextUIProvider} from "@nextui-org/system";
 // import {Providers} from '../provider'
@@ -19,6 +21,7 @@ import { Footer } from '../components/footer/footerclient';
 import { Testcomponent } from '../components/test';
 import { FormComponent } from '@/components/form-client';
 import { SendEmailForm } from '@/components/form';
+import Image from "next/image";
 const font = Poppins({
   subsets: ['latin'],
   weight:["400"]
@@ -52,6 +55,14 @@ export default async function RootLayout({
       <head />
       <body className={font.className} > 
       <Header lng={lng} /> 
+      <div className='flex justify-center items-center mt-5 flex-col '>
+<div>
+<Image src={logo} alt="logo" width={50} height={50}/>
+</div>
+<h3 className="text-3xl font-bold m-5">
+  Divs Are Here 
+</h3>
+      </div>
       {/* <div > */}
       {children}
 

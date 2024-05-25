@@ -35,7 +35,7 @@ export function CarouselSize( { t, lng } : props) {
      <Container >
     <div className= "top-0 flex justify-center items-center mt-10   ">
     <Carousel
-    dir="ltr" 
+    
       plugins={[ 
     
      Autoplay({

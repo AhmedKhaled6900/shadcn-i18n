@@ -38,6 +38,24 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
                             {t('heading2')}
 
                         </h1>
+                        <h1
+                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
+                            className=' m-5 lg:m-10 font-semibold text-xl'>
+                            {t('heading2')}
+
+                        </h1>
+                        <h1
+                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
+                            className=' m-5 lg:m-10 font-semibold text-xl'>
+                            {t('heading2')}
+
+                        </h1>
+                        <h1
+                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
+                            className=' m-5 lg:m-10 font-semibold text-xl'>
+                            {t('heading2')}
+
+                        </h1>
                         {/* <h3>{t("heading")}</h3> */}
                     </div> : <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
                         <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }} className='m-5 lg:m-10  text-xl'> {t('heading')}</h3>
@@ -51,10 +69,10 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
                         </h3>
                     </div>}
                 {
-                    lng === "en" ? <div className=' relative hidden lg:block   '>
-                        <Image className='lg:rounded-tl-[150px] lg:rounded-bl-[150px] '  alt='' src={img} />
-                    </div> : <div className=' relative '>
-                        <Image className='lg:rounded-tr-[150px] lg:rounded-br-[150px] '  alt='' src={img} />
+                    lng === "en" ? <div className='   '>
+                        <Image className='lg:rounded-tl-[150px] lg:rounded-bl-[150px] w-[100%] h-[100%] '   alt='' src={img} />
+                    </div> : <div className='  '>
+                        <Image className='lg:rounded-tr-[150px] lg:rounded-br-[150px] w-[100%] h-[100%] '  alt='' src={img} />
                     </div>
                 }
             </div>

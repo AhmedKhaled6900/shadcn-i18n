@@ -56,9 +56,9 @@ const onClick=()=>{
     <>
     <nav className="  relative z-50 py-4 z-10 justify-between flex bg-gradient-to-b w-full from-b to-black items-center "
 >
-<div>
+{/* <div>
 <Image src={logo} alt="logo" width={35} height={35}/>
-</div>
+</div> */}
 {/* <div className="backdrop-blur-lg bg-white" > */}
 <div>
 {menuItems.map((route) => (
@@ -66,7 +66,7 @@ const onClick=()=>{
     key={route.href}
     href={route.href}
     className={cn(
-      ' font-medium text-lg m-2 transition-colors text-white hover:border-b-2 hover:border-white',
+      ' p-5 font-medium text-lg m-2 transition-colors text-white hover:border-b-2 hover:border-white',
       // route.link ? 'text-black dark:text-white' : 'text-muted-foreground'
     )}
   >

@@ -53,11 +53,13 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
 
                         </h3>
                     </div>}
+
+
                 {
-                    lng === "en" ? <div className=' relative   '>
-                        <Image className='lg:rounded-tl-[150px] lg:rounded-bl-[150px] '  alt='' src={img} />
-                    </div> : <div className=' relative '>
-                        <Image className='lg:rounded-tr-[150px] lg:rounded-br-[150px] '  alt='' src={img} />
+                    lng === "en" ? <div className=''>
+                        <Image className='lg:rounded-tl-[150px] lg:rounded-bl-[150px] w-[100%]  '     alt='' src={img} />
+                    </div> : <div className=' relative w-[100%] h-[100%] '>
+                        <Image className='lg:rounded-tr-[150px] lg:rounded-br-[150px] w-[100%]'   alt='' src={img} />
                     </div>
                 }
             </div>
