@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { t } from 'i18next'
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button"
 export const FirstSectionComponent = ({ t, lng }: props) => {
     useEffect(() => {
         AOS.init({
@@ -19,39 +20,48 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className='justify-center text-start items-center grid grid-cols-1 lg:grid-cols-2 '>
+            <div className='justify-center text-start grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
-                    <div className='  pt-0 lg:pt-20  h-full bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
-                        <h3 data-aos="fade-up" data-aos-duration="2000"
-                            className=' m-5 lg:m-10  font-semibold text-xl'>
+                    <div  className=' flex justify-center flex-col h-full bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
+                        <h3 style={{ lineHeight: "1.3" }}
+                         data-aos="fade-up"  data-aos-duration="1000" 
+                            className=' m-5 font-semibold text-xl'>
                             {t('heading')}
                         </h3>
-                        <h3
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className='m-5 lg:m-10 font-semibold text-xl'>
+                        <h3 style={{ lineHeight: "1.3" }}
+                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
+                            className='m-5  font-semibold text-xl'>
                             {t('heading1')}
-
                         </h3>
-                        <h3
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
-                            className=' m-5 lg:m-10 font-semibold text-xl'>
+                        <h3 style={{ lineHeight: "1.3" }}
+                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
+                            className=' m-5 font-semibold text-xl'>
                             {t('heading2')}
-
                         </h3>
-                        {/* <h3>{t("heading")}</h3> */}
+                        <div className="flex justify-center">
+                        <Button variant="outline" size="lg" className="m-5 text-black hover:border-black font-semibold bg-[#c297dc]" >
+                            Get in touch
+                        </Button>
+                        </div>
                     </div> :
-                     <div className='  pt-0 lg:pt-20  h-full  bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
-                        <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }}
-                         className='m-5 lg:m-10 text-xl'> {t('heading')}</h3>
+                     <div className='flex justify-center flex-col  h-full bg-gradient-to-b from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" 
+                        style={{ lineHeight: "1.3" }}
+                         className='m-5 font-semibold text-xl'> {t('heading')}</h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
-                            style={{ lineHeight: "1.3" }} className='p-5 text-xl'> {t('heading1')}
+                            style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading1')}
 
                         </h3>
                         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
                             style={{ lineHeight: "1.3" }}
-                             className='m-5 lg:m-10 text-xl'> {t('heading2')}
+                             className='m-5 font-semibold text-xl'> {t('heading2')}
 
                         </h3>
+                        <div className="flex justify-center">
+                        <Button variant="outline" size="lg" className="m-5 text-black hover:border-black font-semibold bg-[#c297dc]" >
+                            Get in touch
+                        </Button>
+                        </div>
                     </div>}
 
 

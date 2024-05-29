@@ -1,5 +1,6 @@
 import Container from "../../container"
 import img from "../../../../../public/05076a5e-5142-4626-bf73-b2ed0d28ebc9.jpeg"
+import img2 from "../../../../../public/nvnn1v19miftcw8krm1q.png"
 import Image from "next/image"
 export const ServicesSections = () => {
 
@@ -62,7 +63,7 @@ export const ServicesSections = () => {
             </div>
 
             <div >
-              <Image className=" w-full h-full"  src={img}  alt="image"/>
+              <Image className=" w-full h-full"  src={img2}  alt="image"/>
             </div>
         </div>
         </Container>

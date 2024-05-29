@@ -1,6 +1,6 @@
 
 // "use client"
-import logo from "../../../public/feather-7977327_640.webp"
+import logo from "../../../public/nvnn1v19miftcw8krm1q.png"
 
 import { dir, t } from 'i18next'
 import {NextUIProvider} from "@nextui-org/system";
@@ -55,13 +55,13 @@ export default async function RootLayout({
       <head />
       <body className={font.className} > 
       <Header lng={lng} /> 
-      <div className='flex justify-center items-center mt-5 flex-col '>
-<div>
-<Image src={logo} alt="logo" width={50} height={50}/>
+      <div className='flex justify-center items-center mt-5 flex-col w-full '>
+<div className="rounded-xl">
+<Image className="rounded-xl  " src={logo} alt="logo" width={75} height={75}/>
 </div>
-<h3 className="text-3xl font-bold m-5">
+{/* <h3 className="text-3xl font-bold m-5">
   Divs Are Here 
-</h3>
+</h3> */}
       </div>
       {/* <div > */}
       {children}

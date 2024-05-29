@@ -31,7 +31,10 @@ const {t} = await useTranslation(lng ,"third-page")
     <Image src={bg} alt='' fill/>
     </div>
    {
-      lng==="en"?<div data-aos="fade-right" className=' space-x-4  flex justify-center items-center '>
+      lng==="en"?
+      <div className=' space-x-4  flex justify-center items-center '>
+
+<div data-aos="fade-right" className=' space-x-4  flex justify-center items-center '>
         <div className=' bg-gradient-to-b p-2 lg:p-5 from-b to-black '>
         <h3 data-aos="fade-right"> {t("first")} </h3>
       <h3 data-aos="fade-right"> {t("second")} </h3>
@@ -42,7 +45,8 @@ const {t} = await useTranslation(lng ,"third-page")
       <h3 data-aos="fade-right"> {t("second")} </h3>
       <h3 data-aos="fade-right">{t("third")} </h3>
         </div>
-    </div>:
+    </div>
+      </div>:
     <div data-aos="fade-left" className=' gap-4 flex justify-center items-center  '>
       <div className='bg-gradient-to-b p-2 lg:p-5 from-b to-black  '>
       <h3 data-aos="fade-left"> {t("first")} </h3>

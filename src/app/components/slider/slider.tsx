@@ -34,7 +34,7 @@ export function CarouselSize( { t, lng } : props) {
     <div className=" rounded-2xl">
      <Container >
     <div className= "top-0 flex justify-center items-center mt-10   ">
-    <Carousel
+    <Carousel dir="ltr"
     
       plugins={[ 
     

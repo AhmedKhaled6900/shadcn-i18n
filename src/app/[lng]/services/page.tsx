@@ -43,12 +43,16 @@ export default function ServicesPage({ params: { lng } } : ServicesPageprops) {
     return (
         <> 
       
+{/* <div  style={{ backgroundImage: `url(${img2})` }} className=" w-[100%] h-[100%] z-50 absolute top-0 left-0">
+
+</div> */}
 
         <Slider lng={lng}></Slider>
     
 <ServicesSections>
 
 </ServicesSections>
+
         </>
     )
 }
