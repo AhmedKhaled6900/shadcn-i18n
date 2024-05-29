@@ -55,7 +55,7 @@ export default async function RootLayout({
       <head />
       <body className={font.className} > 
       <Header lng={lng} /> 
-      <div className='flex justify-center items-center mt-5 flex-col w-full '>
+      <div className='flex justify-center items-center my-5 flex-col w-full '>
 <div className="rounded-xl">
 <Image className="rounded-xl  " src={logo} alt="logo" width={75} height={75}/>
 </div>

@@ -19,51 +19,47 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className=' justify-center text-start  grid grid-cols-1 lg:grid-cols-2 '>
+            <div  className='  justify-center text-start  grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
-                    <div className=' h-full flex-col flex justify-center bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
-                        <h1 data-aos="fade-up" data-aos-duration="2000"
+                    <div data-aos="fade-up" data-aos-duration="1000" className=' h-full flex-col flex justify-center bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
+                        <h1 
                             className='m-5 font-semibold text-xl'>
                             {t('heading')}
                         </h1>
                         <h1
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                             className=' m-5  font-semibold text-xl'>
                             {t('heading1')}
 
                         </h1>
                         <h1
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                             className=' m-5 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                             className=' m-5 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                             className='m-5 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800"
                             className=' m-5 font-semibold text-xl'>
                             {t('heading2')}
 
                         </h1>
                         {/* <h3>{t("heading")}</h3> */}
-                    </div> : <div className=' h-full pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
-                        <h3 data-aos="fade-up" data-aos-duration="1000" style={{ lineHeight: "1.3" }} className='m-5 lg:m-10  text-xl'> {t('heading')}</h3>
-                        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
+                    </div> :
+                     <div data-aos="fade-up" data-aos-duration="1000" className=' h-full flex flex-col justify-center pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
+                        <h3  style={{ lineHeight: "1.3" }} className='m-5 lg:m-10  text-xl'> {t('heading')}</h3>
+                        <h3
                             style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading1')}
 
                         </h3>
-                        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
+                        <h3
                             style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading2')}
 
                         </h3>

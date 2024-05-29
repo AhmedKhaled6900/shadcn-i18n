@@ -21,6 +21,8 @@ import Image from 'next/image'
 import { setInterval } from 'timers'
 import { FormSuccess } from './form-success'
 import { FormError } from './form-error'
+import { t } from 'i18next'
+import { usePathname } from 'next/navigation'
 interface props {
   lng: string
   t: any
@@ -38,7 +40,14 @@ export const SendEmailForm=({ t, lng}:props )=>{
   const [ispending, starttransition] = useTransition()
   const [success, setSuccess] = useState<string | undefined>("")
   const [error, setError] = useState<string | undefined>("")
-
+   const Schema =
+  z.object({ 
+     email: z.string().email({
+     message: `${t("emailrequired")}`
+ }),
+  name: z.string().min(3 ,{message:`${t("namerequired")}`}),
+  subject: z.string().min(10 ,{message:`${t("subjectrequired")}`}),
+ });
     const form =useForm<z.infer<typeof Schema>>({
         resolver: zodResolver(Schema),
         defaultValues: {
@@ -87,11 +96,12 @@ export const SendEmailForm=({ t, lng}:props )=>{
                           <Input  className='rounded' 
                             {...field}
                             disabled={ispending}
-                            placeholder="email@example.com"
+                            placeholder= {t("email")}
                             type="email"
                           />
                         </FormControl>
-                        <FormMessage className='text-red-500' />
+                        <FormMessage  className='text-red-500' />
+                      
                       </FormItem>
                     )} />  
 <FormField control={form.control}
@@ -103,11 +113,13 @@ export const SendEmailForm=({ t, lng}:props )=>{
                           <Input className='rounded'
                             {...field}
                             disabled={ispending}
-                            placeholder="Email@example.com"
+                            placeholder= {t("yourname")}
                             type="text"
                           />
                         </FormControl>
                         <FormMessage  className='text-red-500'/>
+                          {/* {t("namerequired")} */}
+                        {/* </FormMessage > */}
                       </FormItem>
                     )} />  
 <FormField control={form.control}
@@ -119,11 +131,12 @@ export const SendEmailForm=({ t, lng}:props )=>{
                           <Input className='rounded'
                             {...field}
                             disabled={ispending}
-                            placeholder={t("your message")}
+                            placeholder={t("yourmessage")}
                             type="textarea"
                           />
                         </FormControl>
-                        <FormMessage className='text-red-500' />
+                        <FormMessage className='text-red-500'/> 
+                    
                       </FormItem>
                     )} />  
                    <FormSuccess  message={success}></FormSuccess>
