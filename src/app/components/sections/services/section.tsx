@@ -15,54 +15,54 @@ export const ServicesSections = () => {
               <Image className=" w-full h-full" src={img}   alt="image"/>
 
             </div>
-            <div className="bg-gradient-to-b from-b to-black">
-          <h3 className="m-5 lg:m-10 text-center  font-semibold text-xl">
+            <div className="bg-gradient-to-b flex justify-center flex-col from-b to-black">
+          <h3 className="m-5 text-3xl text-center font-bold ">
             UX / Ui 
           </h3>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
-          <h5 className="m-5 lg:m-10  text-lg">
+          <h5 className="m-5 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h5>
             </div>
 
 
-            <div className="bg-gradient-to-b from-b to-black">
+            <div className="flex justify-center flex-col bg-gradient-to-b from-b to-black">
 
-            <div className="">
+            <h3 className="m-5 text-3xl text-center font-bold">
+         Front end
+            </h3>
+            <h5 className="m-5">
             another text 
-            </div>
-            <div className="">
+            </h5>
+            <h5 className="m-5">
             another text 
-            </div>
-            <div className="">
+            </h5>
+            <h5 className="m-5">
             another text 
-            </div>
-            <div className="">
+            </h5>
+            <h5 className="m-5">
             another text 
-            </div>
-            <div className="">
+            </h5>
+            <h5 className="m-5">
             another text 
-            </div>
-            <div className="">
-            another text 
-            </div>
+            </h5>
             </div>
 
-            <div >
+            <div>
               <Image className=" w-full h-full"  src={img2}  alt="image"/>
             </div>
         </div>
