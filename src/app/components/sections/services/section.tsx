@@ -1,5 +1,5 @@
 import Container from "../../container"
-import img from "../../../../../public/05076a5e-5142-4626-bf73-b2ed0d28ebc9.jpeg"
+import img from "../../../../../public/a216a26a-8110-45f8-8362-4b4530777e79.svg"
 import img2 from "../../../../../public/nvnn1v19miftcw8krm1qfull.png"
 import Image from "next/image"
 export const ServicesSections = () => {

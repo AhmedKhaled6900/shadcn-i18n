@@ -20,28 +20,29 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
     return (
 
         <>
-            <div className='justify-center text-start grid grid-cols-1 lg:grid-cols-2 '>
+            <div className='text-start grid grid-cols-1 lg:grid-cols-2 '>
                 {lng === "en" ?
-                    <div data-aos="fade-up" data-aos-duration="1000" className=' flex  pt-5 flex-col h-full bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className=' flex  justify-center  pt-5 flex-col h-full bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h3 style={{ lineHeight: "1.3" }}
-                            className=' m-5 font-semibold text-xl'>
+                            className=' m-5 '>
                             {t('heading')}
                         </h3>
                         <h3 style={{ lineHeight: "1.3" }}
-                            className='m-5  font-semibold text-xl'>
+                            className='m-5  '>
+                            {t('heading')}
+
+                        </h3>
+                        <h3 style={{ lineHeight: "1.3" }}
+                            className='m-5  '>
                             {t('heading1')}
                         </h3>
                         <h3 style={{ lineHeight: "1.3" }}
-                            className='m-5  font-semibold text-xl'>
-                            {t('heading1')}
-                        </h3>
-                        <h3 style={{ lineHeight: "1.3" }}
-                            className='m-5  font-semibold text-xl'>
+                            className='m-5 '>
                             {t('heading1')}
                         </h3>
                       
                         <h3 style={{ lineHeight: "1.3" }}
-                            className=' m-5 font-semibold text-xl'>
+                            className=' m-5 '>
                             {t('heading2')}
                         </h3>
                         <div className="flex justify-center">
@@ -50,17 +51,17 @@ export const FirstSectionComponent = ({ t, lng }: props) => {
                         </Button>
                         </div>
                     </div> :
-                     <div data-aos="fade-up" data-aos-duration="1000"  className='flex justify-center flex-col  h-full bg-gradient-to-b from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
+                     <div data-aos="fade-up" data-aos-duration="1000"  className='flex justify-center pt-5 flex-col  h-full bg-gradient-to-b from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
                         <h3 
                         style={{ lineHeight: "1.3" }}
-                         className='m-5 font-semibold text-xl'> {t('heading')}</h3>
+                         className='m-5'> {t('heading')}</h3>
                         <h3 
-                            style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading1')}
+                            style={{ lineHeight: "1.3" }} className='m-5 '> {t('heading1')}
 
                         </h3>
                         <h3 
                             style={{ lineHeight: "1.3" }}
-                             className='m-5 font-semibold text-xl'> {t('heading2')}
+                             className='m-5 '> {t('heading2')}
 
                         </h3>
                         <div className="flex justify-center">

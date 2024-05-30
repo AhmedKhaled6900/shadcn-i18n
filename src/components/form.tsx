@@ -23,6 +23,7 @@ import { FormSuccess } from './form-success'
 import { FormError } from './form-error'
 import { t } from 'i18next'
 import { usePathname } from 'next/navigation'
+import { Separator } from './ui/separator'
 interface props {
   lng: string
   t: any
@@ -86,14 +87,14 @@ export const SendEmailForm=({ t, lng}:props )=>{
 
 </div>
         <Form {...form}>
-<form className="space-y-4 p-10 bg-gradient-to-b  from-b to-black mx-5 rounded-2xl  max-h-[600px] " onSubmit={form.handleSubmit(onSubmit)}>
+<form className="space-y-4 p-10 bg-gradient-to-b  from-b to-black mx-5 rounded-2xl  min-h-[411px] " onSubmit={form.handleSubmit(onSubmit)}>
 <FormField control={form.control}
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("email")}</FormLabel>
+                        {/* <FormLabel>{t("email")}</FormLabel> */}
                         <FormControl>
-                          <Input  className='rounded' 
+                          <Input  className=' pt-5 border-0 border-b-2 border-black  ' 
                             {...field}
                             disabled={ispending}
                             placeholder= {t("email")}
@@ -104,13 +105,14 @@ export const SendEmailForm=({ t, lng}:props )=>{
                       
                       </FormItem>
                     )} />  
+
 <FormField control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("name")}</FormLabel>
+                        {/* <FormLabel>{t("name")}</FormLabel> */}
                         <FormControl>
-                          <Input className='rounded'
+                          <Input className=' pt-5 border-0 border-b-2 border-black  ' 
                             {...field}
                             disabled={ispending}
                             placeholder= {t("yourname")}
@@ -126,9 +128,9 @@ export const SendEmailForm=({ t, lng}:props )=>{
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("message")}</FormLabel>
+                        {/* <FormLabel>{t("message")}</FormLabel> */}
                         <FormControl>
-                          <Input className='rounded'
+                          <Input className=' pt-5 border-0 border-b-2 border-black  ' 
                             {...field}
                             disabled={ispending}
                             placeholder={t("yourmessage")}

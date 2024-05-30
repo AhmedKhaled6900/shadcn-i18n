@@ -23,44 +23,44 @@ export const SecondSectionComponent = ({ t, lng }: props) => {
                 {lng === "en" ?
                     <div data-aos="fade-up" data-aos-duration="1000" className=' h-full flex-col flex justify-center bg-gradient-to-b from-b to-black lg:rounded-br-[150px] lg:rounded-tr-[150px]'>
                         <h1 
-                            className='m-5 font-semibold text-xl'>
+                            className='m-5 '>
                             {t('heading')}
                         </h1>
                         <h1
-                            className=' m-5  font-semibold text-xl'>
+                            className=' m-5  '>
                             {t('heading1')}
 
                         </h1>
                         <h1
-                            className=' m-5 font-semibold text-xl'>
+                            className=' m-5 '>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            className=' m-5 font-semibold text-xl'>
+                            className=' m-5 '>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            className='m-5 font-semibold text-xl'>
+                            className='m-5 '>
                             {t('heading2')}
 
                         </h1>
                         <h1
-                            className=' m-5 font-semibold text-xl'>
+                            className=' m-5 '>
                             {t('heading2')}
 
                         </h1>
                         {/* <h3>{t("heading")}</h3> */}
                     </div> :
                      <div data-aos="fade-up" data-aos-duration="1000" className=' h-full flex flex-col justify-center pt-0 lg:pt-10 bg-gradient-to-b   from-b to-black lg:rounded-tl-[150px] lg:rounded-bl-[150px] '>
-                        <h3  style={{ lineHeight: "1.3" }} className='m-5 lg:m-10  text-xl'> {t('heading')}</h3>
+                        <h3  style={{ lineHeight: "1.3" }} className='m-5 '> {t('heading')}</h3>
                         <h3
-                            style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading1')}
+                            style={{ lineHeight: "1.3" }} className='m-5 '> {t('heading1')}
 
                         </h3>
                         <h3
-                            style={{ lineHeight: "1.3" }} className='m-5 font-semibold text-xl'> {t('heading2')}
+                            style={{ lineHeight: "1.3" }} className='m-5 '> {t('heading2')}
 
                         </h3>
                     </div>}
